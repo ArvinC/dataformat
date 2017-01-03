@@ -7,6 +7,7 @@
 
 数据格式
 ========
+普通数据
 ```JSON
 {
   "msg": "请求成功",
@@ -33,7 +34,44 @@
     [msg]:响应说明
     [code]:响应状态码,一般此处以Http状态码.
     [data]:响应数据主体
+
     
+分页数据
+```JSON
+{
+  "msg": "请求成功",
+  "code": 200,
+  "data": {
+      "last": true,
+      "number": 0,
+      "totalElements": 20,
+      "first": true,
+      "totalPages": 2,
+      "size": 10
+      content:[
+        "datalist0",
+        "datalist1",
+        "datalist2",
+        "datalist3",
+        "datalist4",
+        "datalist5",
+        "datalist6",
+        "datalist7",
+        "datalist8",
+        "datalist9"
+      ]
+  }
+}
+```
+说明:
+    totalPages 总页面
+    totalElements 总数
+    size 每页显示数量
+    number 当前页面
+    first 是否为首页
+    last 是否为末页
+    content 数据集合
+
 状态码
 ========
     - _说明:此处根据HTTP状态码,一般204状态,返回的数据为空白页,此处进行了调整,HTTP请求头状态码为200,code显示204,方便前端判断_
