@@ -47,7 +47,7 @@
       "totalElements": 20,
       "first": true,
       "totalPages": 2,
-      "size": 10
+      "size": 10,
       content:[
         "datalist0",
         "datalist1",
@@ -64,6 +64,7 @@
 }
 ```
 说明:
+
     totalPages 总页面
     totalElements 总数
     size 每页显示数量
