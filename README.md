@@ -48,7 +48,7 @@
       "first": true,
       "totalPages": 2,
       "size": 10,
-      content:[
+      "content":[
         "datalist0",
         "datalist1",
         "datalist2",
@@ -65,13 +65,13 @@
 ```
 说明:
 
-    totalPages 总页面
-    totalElements 总数
-    size 每页显示数量
-    number 当前页面
-    first 是否为首页
-    last 是否为末页
-    content 数据集合
+    [totalPages]: 总页面
+    [totalElements]: 总数
+    [size]: 每页显示数量
+    [number]: 当前页面
+    [first]: 是否为首页
+    [last]: 是否为末页
+    [content]: 数据集合
 
 状态码
 ========
