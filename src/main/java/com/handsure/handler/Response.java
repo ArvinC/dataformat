@@ -27,7 +27,7 @@ public class Response {
      * 请求成功,无需返回结果集
      */
     public static ResponseEntity<Object> success() {
-        return getEntity(null, "success", HttpStatus.NO_CONTENT);
+        return getEntity(null, "success", HttpStatus.OK);
     }
 
     private static ResponseEntity<Object> getEntity(Object body, String msg,
@@ -40,8 +40,9 @@ public class Response {
         data.put(CODE, statusCode.value());
         //错误信息
         if (statusCode.value() >= 400) {
-            data.put(ERROR, body);
+            data.put(ERROR, msg);
         } else {
+	    data.put(MESSAGE, msg);
             data.put(DATA, body);
         }
         return new ResponseEntity(data, headers, statusCode);
